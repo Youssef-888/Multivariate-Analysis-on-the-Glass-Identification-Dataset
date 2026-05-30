@@ -3,13 +3,23 @@
 # AI help was used only to organize and simplify the report/code.
 # The analysis decisions, interpretation, and final review remain my own work.
 
+# Data
+
 library(readxl)
 
-# Data
-col_names <- c("Id", "RI", "Na", "Mg", "Al", "Si", "K", "Ca", "Ba", "Fe", "Type")
-glass <- as.data.frame(read_excel("Youssefdat.xlsx", sheet = "GlassData"))
-names(glass) <- col_names
+download.file(
+  "https://raw.githubusercontent.com/Youssef-888/Multivariate-Analysis-on-the-Glass-Identification-Dataset/main/Youssefdat.xlsx",
+  destfile = "Youssefdat.xlsx",
+  mode = "wb"
+)
 
+col_names <- c("Id", "RI", "Na", "Mg", "Al", "Si", "K", "Ca", "Ba", "Fe", "Type")
+
+glass <- as.data.frame(
+  read_excel("Youssefdat.xlsx", sheet = "GlassData")
+)
+
+names(glass) <- col_names
 pca_vars <- c("RI", "Na", "Mg", "Al", "Si", "K", "Ca", "Ba", "Fe")
 pair_vars <- c("RI", "Na", "Mg", "Al", "Ca", "Ba")
 
