@@ -6,8 +6,11 @@ Principal Component Analysis, Multidimensional Scaling, Discriminant Analysis, C
 ## Analysis Used
 
 Each Project I, II, and III uses specific methods on the same dataset:
+
 Project I: Outlier Detection and Discriminant Analysis
+
 Project II: Cluster-Based Analysis
+
 Project III: PCA and MDS
 
 <img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/3a0eba4f-52fc-4ef3-bdc2-586928a4bcc7" />
