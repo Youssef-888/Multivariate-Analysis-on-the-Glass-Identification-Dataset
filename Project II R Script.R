@@ -1,5 +1,11 @@
 library(readxl)
 
+download.file(
+  "https://raw.githubusercontent.com/Youssef-888/Multivariate-Analysis-on-the-Glass-Identification-Dataset/main/Youssefdat.xlsx",
+  destfile = "Youssefdat.xlsx",
+  mode = "wb"
+)
+
 data <- as.data.frame(read_excel("Youssefdat.xlsx", sheet = "GlassData"))
 features <- setdiff(names(data), c("Id", "Type"))
 data <- data[complete.cases(data[, c("Type", features)]), ]
